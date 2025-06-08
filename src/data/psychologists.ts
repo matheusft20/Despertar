@@ -26,7 +26,7 @@ export const psychologists: Psychologist[] = [
     specialty: 'Psicodrama',
     description:
       '8 anos de experiência em ansiedade e depressão. Abordagem cognitivo-comportamental.',
-    image: '../dist/assets/images/Dr1.jpeg',
+    image: '/assets/Dr1.jpeg',
     rating: 4.9,
     price: 180,
     badges: ['Online', 'Presencial'],
