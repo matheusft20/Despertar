@@ -64,7 +64,7 @@ const PsychologistList: React.FC<PsychologistListProps> = ({
       <div className="relative md:hidden">
         <div
           ref={carouselRef}
-          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-6"
+          className="flex w-100 h-70 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-6"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
