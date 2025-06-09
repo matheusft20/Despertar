@@ -63,3 +63,48 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Pulse animation for auto-play indicator */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth transitions for pagination dots */
+.pagination-dot {
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination-dot:hover {
+  transform: scale(1.2);
+}
+
+/* Enhanced carousel navigation buttons */
+.carousel-nav-btn {
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(8px);
+}
+
+.carousel-nav-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth scroll behavior for carousel */
+.carousel-container {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Auto-play indicator styling */
+.autoplay-indicator {
+  animation: pulse 2s ease-in-out infinite;
+}
