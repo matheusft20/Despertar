@@ -97,12 +97,12 @@ export const psychologists: Psychologist[] = [
   },
    {
     id: 4,
-    name: 'Dra. Fernanda Almeida',
+    name: 'Dra. Fernandqqa Almeida',
     specialty: 'Relacionamentos',
     description:
-      'Especialista em terapia de casal e relacionamentos interpessoais.',
+      'Especiaqqlista em terapia de casal e relacionamentos interpessoais.',
     image:
-      'https://images.pexels.com/photos/5327584/pexels-photo-5327584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'https://images.pexels.com/photos/53272584/pexels-photo-5327584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     rating: 4.7,
     price: 190,
     badges: ['Online', 'Presencial'],
