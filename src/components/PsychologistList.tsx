@@ -64,7 +64,7 @@ const PsychologistList: React.FC<PsychologistListProps> = ({
       <div className="relative md:hidden">
         <div
           ref={carouselRef}
-          className="flex w-100 h-70 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-6"
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-6"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -74,7 +74,7 @@ const PsychologistList: React.FC<PsychologistListProps> = ({
           {filteredPsychologists.map((psychologist) => (
             <div
               key={psychologist.id}
-              className="flex-none w-[calc(100vw-48px)] sm:w-[340px] snap-start"
+              className="flex-none w-[280px] sm:w-[320px] snap-start"
             >
               <PsychologistCard
                 psychologist={psychologist}
@@ -86,8 +86,6 @@ const PsychologistList: React.FC<PsychologistListProps> = ({
             </div>
           ))}
         </div>
-
-        {/* Navigation Buttons */}
       </div>
 
       {/* Specialist Modal */}
@@ -107,56 +105,71 @@ const PsychologistCard: React.FC<{
   psychologist: any;
   onViewProfile: () => void;
 }> = ({ psychologist, onViewProfile }) => (
-  <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
-    <div className="relative">
+  <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105 h-[480px] flex flex-col">
+    <div className="relative h-48 overflow-hidden">
       <img
         src={psychologist.image}
         alt={psychologist.name}
-        className="h-50 sm:h-56 w-full object-cover"
+        className="w-full h-full object-cover"
       />
+      <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 flex items-center">
+        <Star className="h-4 w-4 text-yellow-400 fill-current" />
+        <span className="ml-1 text-sm font-medium text-gray-700">{psychologist.rating}</span>
+      </div>
     </div>
-    <div className="p-4 sm:p-6 flex-1 flex flex-col">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-lg sm:text-xl font-semibold text-gray-800 line-clamp-1">
+    
+    <div className="p-5 flex-1 flex flex-col">
+      <div className="mb-3">
+        <h3 className="text-lg font-semibold text-gray-800 line-clamp-1 mb-1">
           {psychologist.name}
         </h3>
-        <div className="flex items-center shrink-0 ml-2">
-          <Star className="h-5 w-5 text-yellow-400 fill-current" />
-          <span className="ml-1 text-gray-600">{psychologist.rating}</span>
-        </div>
+        <p className="text-indigo-600 font-medium text-sm">
+          {psychologist.specialty}
+        </p>
       </div>
-      <p className="text-indigo-600 font-medium text-sm sm:text-base">
-        {psychologist.specialty}
-      </p>
-      <div className="mt-2 flex flex-wrap gap-1.5">
+      
+      <div className="mb-3 flex flex-wrap gap-1.5">
         {psychologist.badges.map((badge: string, index: number) => (
           <span
             key={index}
-            className={`px-2 py-0.5 text-xs rounded-full ${
+            className={`px-2 py-1 text-xs rounded-full font-medium ${
               badge === 'Online'
-                ? 'bg-green-100 text-green-800'
-                : 'bg-indigo-100 text-indigo-800'
+                ? 'bg-green-100 text-green-700'
+                : badge === 'Primeira consulta grátis'
+                ? 'bg-blue-100 text-blue-700'
+                : 'bg-indigo-100 text-indigo-700'
             }`}
           >
             {badge}
           </span>
         ))}
       </div>
-      <p className="mt-3 text-sm sm:text-base text-gray-600 line-clamp-2">
+      
+      <p className="text-gray-600 text-sm line-clamp-3 flex-1 mb-4">
         {psychologist.description}
       </p>
-      <div className="mt-4 sm:mt-6 flex justify-between items-center pt-4 border-t border-gray-100">
-        <div>
-          <p className="text-xs sm:text-sm text-gray-500">Valor da consulta</p>
-          <p className="text-base sm:text-lg font-semibold text-gray-800">
-            R$ {psychologist.price}
-          </p>
+      
+      <div className="mt-auto pt-4 border-t border-gray-100">
+        <div className="flex justify-between items-center mb-3">
+          <div>
+            <p className="text-xs text-gray-500">Valor da consulta</p>
+            <p className="text-lg font-bold text-gray-800">
+              R$ {psychologist.price}
+            </p>
+          </div>
+          <div className="text-right">
+            <p className="text-xs text-gray-500">Experiência</p>
+            <p className="text-sm font-medium text-gray-700">
+              {psychologist.detailedInfo.experience}
+            </p>
+          </div>
         </div>
+        
         <button
           onClick={onViewProfile}
-          className="px-3 sm:px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:bg-indigo-700 transition-colors"
+          className="w-full py-2.5 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-200"
         >
-          Ver Perfil
+          Ver Perfil Completo
         </button>
       </div>
     </div>
