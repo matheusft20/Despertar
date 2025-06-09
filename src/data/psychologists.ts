@@ -94,7 +94,8 @@ export const psychologists: Psychologist[] = [
         'Autoestima',
       ],
     },
-     {
+  },
+   {
     id: 4,
     name: 'Dra. Fernanda Almeida',
     specialty: 'Relacionamentos',
@@ -120,7 +121,7 @@ export const psychologists: Psychologist[] = [
         'Autoestima',
       ],
     },
-     {
+      {
     id: 5,
     name: 'Dra. Fernanda Almeida',
     specialty: 'Relacionamentos',
@@ -146,7 +147,7 @@ export const psychologists: Psychologist[] = [
         'Autoestima',
       ],
     },
-     {
+      {
     id: 6,
     name: 'Dra. Fernanda Almeida',
     specialty: 'Relacionamentos',
@@ -172,5 +173,4 @@ export const psychologists: Psychologist[] = [
         'Autoestima',
       ],
     },
-  },
 ];
