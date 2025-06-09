@@ -121,5 +121,32 @@ export const psychologists: Psychologist[] = [
         'Problemas de Aprendizagem',
       ],
     },
+  },
+  {
+    id: 5,
+    name: 'Dr. Rafael Costa',
+    specialty: 'Terapia Infantil',
+    description:
+      'Especialista em desenvolvimento infantil e adolescentes. Atendimento lúdico.',
+    image:
+      'https://images.pexels.com/photos/6130739/pexels-photo-6130739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    rating: 4.8,
+    price: 200,
+    badges: ['Online', 'Primeira consulta grátis'],
+    detailedInfo: {
+      age: 42,
+      experience: '12 anos',
+      education: 'Doutorado em Psicologia do Desenvolvimento - UFRJ',
+      approach: 'Terapia Lúdica e Sistêmica',
+      patientCount: 620,
+      reviewCount: 245,
+      languages: ['Português'],
+      specializations: [
+        'Desenvolvimento Infantil',
+        'TDAH',
+        'Autismo',
+        'Problemas de Aprendizagem',
+      ],
+    },
   },  
 ];
