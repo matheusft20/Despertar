@@ -201,14 +201,7 @@ const PsychologistList: React.FC<PsychologistListProps> = ({
         )}
 
         {/* Auto-play indicator */}
-        {isAutoPlaying && filteredPsychologists.length > 1 && (
-          <div className="flex justify-center mt-2">
-            <span className="text-xs text-gray-500 flex items-center">
-              <div className="w-2 h-2 bg-indigo-600 rounded-full animate-pulse mr-2"></div>
-              Reprodução automática ativa
-            </span>
-          </div>
-        )}
+        {isAutoPlaying && filteredPsychologists.length > 1 &&}
       </div>
 
       {/* Specialist Modal */}
