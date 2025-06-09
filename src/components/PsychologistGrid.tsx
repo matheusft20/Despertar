@@ -76,7 +76,14 @@ const PsychologistCard: React.FC<{
   psychologist: any;
   onViewProfile: () => void;
 }> = ({ psychologist, onViewProfile }) => (
-  <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 h-[500px] flex flex-col">
+  <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 h-[540px] flex flex-col relative">
+    {/* Promotional Badge */}
+    <div className="absolute top-3 left-3 z-10">
+      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse shadow-lg">
+        🔥 OFERTA ESPECIAL
+      </div>
+    </div>
+
     <div className="relative h-52 overflow-hidden">
       <img
         src={psychologist.image}
@@ -121,26 +128,28 @@ const PsychologistCard: React.FC<{
       </p>
       
       <div className="mt-auto pt-4 border-t border-gray-100">
-        <div className="flex justify-between items-center mb-4">
-          <div>
-            <p className="text-xs text-gray-500 uppercase tracking-wide">Consulta</p>
-            <p className="text-xl font-bold text-gray-800">
-              R$ {psychologist.price}
-            </p>
-          </div>
-          <div className="text-right">
-            <p className="text-xs text-gray-500 uppercase tracking-wide">Experiência</p>
-            <p className="text-sm font-semibold text-gray-700">
-              {psychologist.detailedInfo.experience}
-            </p>
+        {/* Promotional Pricing */}
+        <div className="mb-4 p-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-green-200">
+          <div className="flex justify-between items-center">
+            <div>
+              <p className="text-xs text-gray-500 line-through">De R$ {psychologist.price}</p>
+              <p className="text-xl font-bold text-green-600">R$ 120</p>
+              <p className="text-xs text-green-700 font-medium">Valor promocional</p>
+            </div>
+            <div className="text-right">
+              <span className="inline-block px-2 py-1 bg-red-500 text-white text-xs font-bold rounded animate-bounce">
+                -33%
+              </span>
+              <p className="text-xs text-gray-500 mt-1">{psychologist.detailedInfo.experience}</p>
+            </div>
           </div>
         </div>
         
         <button
           onClick={onViewProfile}
-          className="w-full py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white text-sm font-semibold rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition-all duration-200 shadow-md hover:shadow-lg"
+          className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
         >
-          Ver Perfil Completo
+          🎯 Agendar Consulta Promocional
         </button>
       </div>
     </div>

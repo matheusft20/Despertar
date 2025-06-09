@@ -108,3 +108,51 @@
 .autoplay-indicator {
   animation: pulse 2s ease-in-out infinite;
 }
+
+/* Promotional animations */
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0,-30px,0);
+  }
+  70% {
+    transform: translate3d(0,-15px,0);
+  }
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Promotional badge glow effect */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.8), 0 0 30px rgba(239, 68, 68, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.5);
+  }
+}
+
+.promotional-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Form input focus effects */
+.form-input:focus {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Modal backdrop blur */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+}
