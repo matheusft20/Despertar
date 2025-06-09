@@ -96,7 +96,7 @@ export const psychologists: Psychologist[] = [
     },
   },
   {
-    id: 2,
+    id: 4,
     name: 'Dr. Rafael Costa',
     specialty: 'Terapia Infantil',
     description:
