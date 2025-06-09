@@ -41,7 +41,7 @@ const PsychologistList: React.FC<PsychologistListProps> = ({
   }
 
   // Calculate total slides for mobile carousel
-  const cardWidth = 300; // Approximate card width including gap
+  const cardWidth = 400; // Approximate card width including gap
   const totalSlides = Math.max(0, filteredPsychologists.length - 1);
 
   const scrollToSlide = (slideIndex: number) => {
