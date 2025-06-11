@@ -244,6 +244,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
                   Data da Consulta *
                 </label>
                 <input type="date"
+                  value="data"
                   className={`w-full px-3 py-2 border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 ${
                     errors.appointmentType ? 'border-red-500' : 'border-gray-300'
                   }`}
