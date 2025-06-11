@@ -45,10 +45,9 @@ const BookingModal: React.FC<BookingModalProps> = ({
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const appointmentTypes = [
-    { value: 'consulta-individual', label: 'Consulta Individual - R$ 120', price: 120 },
-    { value: 'terapia-casal', label: 'Terapia de Casal - R$ 180', price: 180 },
-    { value: 'sessao-grupo', label: 'Sessão em Grupo - R$ 80', price: 80 },
-    { value: 'avaliacao-psicologica', label: 'Avaliação Psicológica - R$ 200', price: 200 }
+    { value: 'Chat Online', label: 'Chat online - Sessão de 60 minutos', price: 110 },
+    { value: 'whatsapp Texto/Áudio', label: 'whatsapp Texto/Áudio - Sessão de 60 minutos', price: 110 },
+    { value: 'Whatsapp Video', label: 'Whatsapp Video - Sessão de 60 minutos', price: 110 }
   ];
 
   const timeSlots = [
