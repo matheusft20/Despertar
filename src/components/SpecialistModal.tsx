@@ -147,7 +147,7 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
                     className="w-full flex items-center justify-center px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <Calendar className="w-5 h-5 mr-2" />
-                    Agendar Consulta Promocional
+                    Agende sua primeira sessão
                   </button>
                 </div>
               </div>
