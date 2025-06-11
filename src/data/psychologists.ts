@@ -29,7 +29,7 @@ export const psychologists: Psychologist[] = [
     description:
       '2 anos de experiência em ansiedade e depressão. Abordagem cognitivo-comportamental.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF9gId8EF8pif5M4AlCI4ung-hJqkoafXqQ&s',
-    video: 'https://www.youtube.com/watch?v=nnl_Vi_6u5c',  // URL completa do YouTube
+    video: '',  // URL completa do YouTube
     rating: 4.9,
     price: 109.90,
     badges: ['Online'],
@@ -52,7 +52,7 @@ export const psychologists: Psychologist[] = [
     description:
       '2 anos de experiência em ansiedade e depressão. Abordagem cognitivo-comportamental.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF9gId8EF8pif5M4AlCI4ung-hJqkoafXqQ&s',
-    video: 'https://www.youtube.com/watch?v=EXEMPLO_ID', // <— adicione aqui
+    video: '', // <— adicione aqui
     rating: 4.9,
     price: 109.90,
     badges: ['Online'],
