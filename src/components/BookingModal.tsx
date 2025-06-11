@@ -243,22 +243,16 @@ const BookingModal: React.FC<BookingModalProps> = ({
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Data da Consulta *
                 </label>
-<div>
-  <label className="block text-sm font-medium text-gray-700 mb-2">
-    Data da Consulta *
-  </label>
   <input
     type="date"
     name="date"
     value={formData.date}
-    min={getTodayDate()}
     onChange={handleInputChange}
+    min={getTodayDate()}
     className={`w-full px-3 py-2 border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 ${
       errors.date ? 'border-red-500' : 'border-gray-300'
     }`}
   />
-  {errors.date && <p className="mt-1 text-sm text-red-600">{errors.date}</p>}
-</div>
               {/* Time */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
