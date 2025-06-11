@@ -63,7 +63,7 @@ export const psychologists: Psychologist[] = [
       reviewCount: 180,
       languages: ['Português'],
       specializations: ['Ansiedade', 'Depressão', 'Relacionamentos', 'luto'],
-      crp:'19/5066',
+      crp:'19/805',
     },
   },
   
