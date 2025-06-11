@@ -4,6 +4,7 @@ interface Psychologist {
   specialty: string;
   description: string;
   image: string;
+  video: string;
   rating: number;
   price: number;
   badges: string[];
