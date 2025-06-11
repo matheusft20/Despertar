@@ -59,7 +59,7 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
               {/* Substitui imagem por vídeo */}
               <div className="md:w-1/3">
                 <video
-                  src={Psychologist.video}
+                  src={psychologist.video}
                   className="w-full h-70 md:h-64 object-cover rounded-lg"
                   autoPlay
                   muted
