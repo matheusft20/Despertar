@@ -39,7 +39,7 @@ export const psychologists: Psychologist[] = [
       patientCount: 450,
       reviewCount: 180,
       languages: ['Português'],
-      specializations: ['Ansiedade', 'Depressão', 'autoestima', 'Estresse'],
+      specializations: ['Ansiedade', 'Depressão', 'autoestima'],
       crp:'19/5066',
     },
   },
