@@ -80,7 +80,7 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-sm text-gray-500 line-through">De R$ {specialist.price}</p>
-                      <p className="text-2xl font-bold text-green-600">Por R$ 120</p>
+                      <p className="text-2xl font-bold text-green-600">Por R$ 110</p>
                       <p className="text-sm text-green-700 font-medium">🎉 Oferta especial!</p>
                     </div>
                     <div className="flex flex-col items-end space-y-2">
