@@ -84,7 +84,7 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
 
                   <div>                   
                     <p className="text-sm text-gray-500">CRP</p>
-                    <p className="font-medium">{specialist.detai.edInfo.crp}</p>
+                    <p className="font-medium">{specialist.detailedInfo.crp}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Pacientes atendidos</p>
