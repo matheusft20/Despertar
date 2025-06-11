@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
-import { X, Star, MessageCircle, Calendar } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, Star, Calendar } from 'lucide-react';
 import BookingModal from './BookingModal';
 
+interface SpecialistModalProps {
+  specialist: any;
+  isOpen: boolean;
+  onClose: () => void;
+  onContactClick?: () => void;
+}
 
-
-const YourOfferCard: React.FC<{ specialist: any }> = ({ specialist }) => {
+const SpecialistModal: React.FC<SpecialistModalProps> = ({
+  specialist,
+  isOpen,
+  onClose,
+  onContactClick
+}) => {
+  // Timer de 5 minutos
   const [secondsLeft, setSecondsLeft] = useState(5 * 60);
 
   useEffect(() => {
@@ -18,22 +29,9 @@ const YourOfferCard: React.FC<{ specialist: any }> = ({ specialist }) => {
   const formatTime = (sec: number) => {
     const m = Math.floor(sec / 60).toString().padStart(2, '0');
     const s = (sec % 60).toString().padStart(2, '0');
-    return ${m}:${s};
+    return `${m}:${s}`;
   };
 
-interface SpecialistModalProps {
-  specialist: any;
-  isOpen: boolean;
-  onClose: () => void;
-  onContactClick: () => void;
-}
-
-const SpecialistModal: React.FC<SpecialistModalProps> = ({
-  specialist,
-  isOpen,
-  onClose,
-  onContactClick
-}) => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   if (!isOpen) return null;
@@ -42,7 +40,10 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
     <>
       <div className="fixed inset-0 z-50 overflow-y-auto">
         <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-          <div className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75\" onClick={onClose}></div>
+          <div
+            className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75"
+            onClick={onClose}
+          ></div>
 
           <div className="inline-block w-full max-w-2xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
             <div className="absolute top-0 right-0 pt-4 pr-4">
@@ -66,7 +67,7 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold text-gray-900">{specialist.name}</h3>
                 <p className="mt-1 text-lg text-indigo-600">{specialist.specialty}</p>
-                
+
                 <div className="flex items-center mt-2">
                   <Star className="w-5 h-5 text-yellow-400 fill-current" />
                   <span className="ml-1 text-gray-600">{specialist.rating}</span>
@@ -76,15 +77,18 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
 
                 {/* Promotional Price Display */}
                 <div className="mt-4 p-4 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-start justify-between">
                     <div>
                       <p className="text-sm text-gray-500 line-through">De R$ {specialist.price}</p>
                       <p className="text-2xl font-bold text-green-600">Por R$ 120</p>
                       <p className="text-sm text-green-700 font-medium">🎉 Oferta especial!</p>
                     </div>
-                    <div className="text-right">
+                    <div className="flex flex-col items-end space-y-2">
                       <span className="inline-block px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full animate-pulse">
                         -33% OFF
+                      </span>
+                      <span className="text-lg font-semibold text-red-600 bg-red-100 px-2 py-1 rounded-lg animate-pulse">
+                        Expira em {formatTime(secondsLeft)}
                       </span>
                     </div>
                   </div>
@@ -97,11 +101,9 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Experiência</p>
-
                     <p className="font-medium">{specialist.detailedInfo.experience}</p>
                   </div>
-
-                  <div>                   
+                  <div>
                     <p className="text-sm text-gray-500">CRP</p>
                     <p className="font-medium">{specialist.detailedInfo.crp}</p>
                   </div>
@@ -147,7 +149,6 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
                     <Calendar className="w-5 h-5 mr-2" />
                     Agendar Consulta Promocional
                   </button>
-
                 </div>
               </div>
             </div>
