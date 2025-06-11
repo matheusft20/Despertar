@@ -18,7 +18,7 @@ const YourOfferCard: React.FC<{ specialist: any }> = ({ specialist }) => {
   const formatTime = (sec: number) => {
     const m = Math.floor(sec / 60).toString().padStart(2, '0');
     const s = (sec % 60).toString().padStart(2, '0');
-    return `${m}:${s}`;
+    return ${m}:${s};
   };
 
 interface SpecialistModalProps {
@@ -75,29 +75,20 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
                 </div>
 
                 {/* Promotional Price Display */}
-               <div className="p-4 bg-white rounded-2xl shadow-md">
-      <div className="flex justify-between items-center">
-        <div>
-          <p className="text-sm text-gray-500 line-through">
-            De R$ {specialist.price}
-          </p>
-          <p className="text-2xl font-bold text-green-600">
-            Por R$ 120
-          </p>
-          <p className="text-sm text-green-700 font-medium">
-            🎉 Oferta especial!
-          </p>
-        </div>
-        <div className="text-right space-y-2">
-          <span className="inline-block px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full animate-pulse">
-            -33% OFF
-          </span>
-          <div className="inline-block mt-1 px-4 py-2 bg-yellow-100 text-yellow-800 font-semibold rounded-xl shadow animate-pulse">
-            ⏰ Tempo restante: {formatTime(secondsLeft)}
-          </div>
-        </div>
-      </div>
-    </div>
+                <div className="mt-4 p-4 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm text-gray-500 line-through">De R$ {specialist.price}</p>
+                      <p className="text-2xl font-bold text-green-600">Por R$ 120</p>
+                      <p className="text-sm text-green-700 font-medium">🎉 Oferta especial!</p>
+                    </div>
+                    <div className="text-right">
+                      <span className="inline-block px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full animate-pulse">
+                        -33% OFF
+                      </span>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <div>
