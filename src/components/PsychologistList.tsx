@@ -269,7 +269,7 @@ const PsychologistCard: React.FC<{
             </div>
             <div className="text-right">
               <span className="inline-block px-2 py-1 bg-red-500 text-white text-xs font-bold rounded animate-bounce">
-                -31,3%
+                31,3%
               </span>
               <p className="text-xs text-gray-500 mt-1">{psychologist.detailedInfo.experience}</p>
             </div>
