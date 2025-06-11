@@ -28,7 +28,7 @@ export const psychologists: Psychologist[] = [
     description:
       '2 anos de experiência em ansiedade e depressão. Abordagem cognitivo-comportamental.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF9gId8EF8pif5M4AlCI4ung-hJqkoafXqQ&s',
-    video: 'https://www.youtube.com/watch?v=nnl_Vi_6u5c&list=RD97Rurz3ueuI&index=4'
+    video: 'https://www.youtube.com/watch?v=nnl_Vi_6u5c&list=RD97Rurz3ueuI&index=4',
     rating: 4.9,
     price: 109.90,
     badges: ['Online'],
