@@ -170,6 +170,11 @@ const BookingModal: React.FC<BookingModalProps> = ({
 
   if (!isOpen) return null;
 
+  function getTodayDate() {
+  const today = new Date();
+  return today.toISOString().split('T')[0];
+}
+
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
