@@ -129,7 +129,7 @@ const PsychologistCard: React.FC<{
             <div>
               <p className="text-xs text-gray-500 line-through">De R$ {psychologist.price}</p>
               <p className="text-xl font-bold text-green-600">R$ 120</p>
-              <p className="text-xs text-green-700 font-medium">Valor promocional</p>
+              <p className="text-xs text-green-700 font-medium">Sessão a preço especial</p>
             </div>
             <div className="text-right">
               <span className="inline-block px-2 py-1 bg-red-500 text-white text-xs font-bold rounded animate-bounce">
