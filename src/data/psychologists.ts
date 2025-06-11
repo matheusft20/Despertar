@@ -16,6 +16,7 @@ interface Psychologist {
     reviewCount: number;
     languages: string[];
     specializations: string[];
+    crp: string;
   };
 }
 
@@ -39,6 +40,7 @@ export const psychologists: Psychologist[] = [
       reviewCount: 180,
       languages: ['Português', 'Inglês'],
       specializations: ['Ansiedade', 'Depressão', 'autoestima', 'Estresse'],
+      crp:'19/5066'
     },
   },
   {
