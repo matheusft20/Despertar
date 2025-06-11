@@ -213,11 +213,7 @@ const PsychologistCard: React.FC<{
     onClick={onUserInteraction}
   >
     {/* Promotional Badge */}
-    <div className="absolute top-3 left-3 z-10">
-      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse shadow-lg">
-        🔥 OFERTA ESPECIAL
-      </div>
-    </div>
+
 
     <div className="relative h-48 overflow-hidden">
       <img
