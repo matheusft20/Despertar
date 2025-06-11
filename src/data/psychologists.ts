@@ -43,5 +43,28 @@ export const psychologists: Psychologist[] = [
       crp:'19/5066',
     },
   },
- 
+
+  {
+    id: 2,
+    name: 'Dra. Andréa Paula',
+    specialty: 'Psicodrama',
+    description:
+      '2 anos de experiência em ansiedade e depressão. Abordagem cognitivo-comportamental.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF9gId8EF8pif5M4AlCI4ung-hJqkoafXqQ&s',
+    rating: 4.9,
+    price: 109.90,
+    badges: ['Online'],
+    detailedInfo: {
+      age: 35,
+      experience: '2 anos',
+      education: 'Mestrado em Psicologia Clínica - USP',
+      approach: 'TCC (Terapia Cognitiva Comportamental) e Psicologia Analítica',
+      patientCount: 450,
+      reviewCount: 180,
+      languages: ['Português'],
+      specializations: ['Ansiedade', 'Depressão', 'Relacionamentos', 'luto'],
+      crp:'19/5066',
+    },
+  },
+  
 ];
