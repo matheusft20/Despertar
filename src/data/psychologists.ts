@@ -30,7 +30,7 @@ export const psychologists: Psychologist[] = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF9gId8EF8pif5M4AlCI4ung-hJqkoafXqQ&s',
     rating: 4.9,
     price: 109.90,
-    badges: ['Online', 'Presencial'],
+    badges: ['Online'],
     detailedInfo: {
       age: 35,
       experience: '2 anos',
