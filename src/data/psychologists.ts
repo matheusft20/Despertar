@@ -1,10 +1,10 @@
-interface Psychologist {
+export interface Psychologist {
   id: number;
   name: string;
   specialty: string;
   description: string;
   image: string;
-  video: string;
+  video: string;        // sempre presente
   rating: number;
   price: number;
   badges: string[];
@@ -29,7 +29,7 @@ export const psychologists: Psychologist[] = [
     description:
       '2 anos de experiência em ansiedade e depressão. Abordagem cognitivo-comportamental.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF9gId8EF8pif5M4AlCI4ung-hJqkoafXqQ&s',
-    video: '',
+    video: 'https://www.youtube.com/watch?v=nnl_Vi_6u5c',  // URL completa do YouTube
     rating: 4.9,
     price: 109.90,
     badges: ['Online'],
@@ -41,11 +41,10 @@ export const psychologists: Psychologist[] = [
       patientCount: 450,
       reviewCount: 180,
       languages: ['Português'],
-      specializations: ['Ansiedade', 'Depressão', 'autoestima'],
-      crp:'19/5066',
+      specializations: ['Ansiedade', 'Depressão', 'Autoestima'],
+      crp: '19/5066',
     },
   },
-
   {
     id: 2,
     name: 'Dra. Andréa Paula',
@@ -53,6 +52,7 @@ export const psychologists: Psychologist[] = [
     description:
       '2 anos de experiência em ansiedade e depressão. Abordagem cognitivo-comportamental.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF9gId8EF8pif5M4AlCI4ung-hJqkoafXqQ&s',
+    video: 'https://www.youtube.com/watch?v=EXEMPLO_ID', // <— adicione aqui
     rating: 4.9,
     price: 109.90,
     badges: ['Online'],
@@ -60,13 +60,12 @@ export const psychologists: Psychologist[] = [
       age: 35,
       experience: '2 anos',
       education: 'Mestrado em Psicologia Clínica - USP',
-      approach: 'TCC (Terapia Cognitiva Comportamental) e Psicologia Analítica',
+      approach: 'TCC e Psicologia Analítica',
       patientCount: 450,
       reviewCount: 180,
       languages: ['Português'],
-      specializations: ['Ansiedade', 'Depressão', 'Relacionamentos', 'luto'],
-      crp:'19/805',
+      specializations: ['Ansiedade', 'Depressão', 'Relacionamentos', 'Luto'],
+      crp: '19/805',
     },
   },
-  
 ];
