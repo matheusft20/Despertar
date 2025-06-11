@@ -130,26 +130,8 @@ const PsychologistList: React.FC<PsychologistListProps> = ({
         {/* Navigation Buttons */}
         {filteredPsychologists.length > 1 && (
           <>
-            <button
-              onClick={() => {
-                handleUserInteraction();
-                prevSlide();
-              }}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg hover:bg-white transition-all duration-200 focus:outline-none"
-              aria-label="Especialista anterior"
-            >
-              <ChevronLeft className="w-5 h-5 text-gray-800" />
-            </button>
-            <button
-              onClick={() => {
-                handleUserInteraction();
-                nextSlide();
-              }}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg hover:bg-white transition-all duration-200 focus:outline-none"
-              aria-label="Próximo especialista"
-            >
-              <ChevronRight className="w-5 h-5 text-gray-800" />
-            </button>
+          
+           
           </>
         )}
 
