@@ -154,7 +154,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
       message += `CEP: ${formData.cep}\n\n`;
     }
     
-    message += `✨ *Valor promocional aplicado!*\n`;
+    message += `✨ *Sessão a preço especial aplicado!*\n`;
     message += `🎉 Aguardo confirmação do agendamento!`;
 
     const encodedMessage = encodeURIComponent(message);
