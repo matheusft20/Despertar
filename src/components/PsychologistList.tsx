@@ -129,10 +129,7 @@ const PsychologistList: React.FC<PsychologistListProps> = ({
       <div className="relative md:hidden">
         {/* Navigation Buttons */}
         {filteredPsychologists.length > 1 && (
-          <>
-          
-           
-          </>
+   
         )}
 
         <div
