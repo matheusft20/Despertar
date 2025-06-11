@@ -78,11 +78,6 @@ const PsychologistCard: React.FC<{
 }> = ({ psychologist, onViewProfile }) => (
   <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 h-[540px] flex flex-col relative">
     {/* Promotional Badge */}
-    <div className="absolute top-3 left-3 z-10">
-      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse shadow-lg">
-        🔥 OFERTA ESPECIAL
-      </div>
-    </div>
 
     <div className="relative h-52 overflow-hidden">
       <img
