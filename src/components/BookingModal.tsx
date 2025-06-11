@@ -10,7 +10,7 @@ interface BookingModalProps {
 interface FormData {
   phone: string;
   appointmentType: string;
-  date: string;
+  date: [];
   time: string;
   cep: string;
   street: string;
