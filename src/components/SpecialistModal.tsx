@@ -85,7 +85,7 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
                     </div>
                     <div className="flex flex-col items-end space-y-2">
                       <span className="inline-block px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full animate-pulse">
-                        -33% OFF
+                        -31,3% OFF
                       </span>
                       <span className="text-lg font-semibold text-red-600 bg-red-100 px-2 py-1 rounded-lg animate-pulse">
                         Expira em {formatTime(secondsLeft)}
