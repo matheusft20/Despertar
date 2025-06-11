@@ -75,21 +75,25 @@ const SpecialistModal: React.FC<SpecialistModalProps> = ({
                   <span className="text-gray-600">{specialist.detailedInfo.reviewCount} avaliações</span>
                 </div>
 
-                {/* Promotional Price Display */}
-                <div className="mt-4 p-4 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <p className="text-sm text-gray-500 line-through">De R$ {specialist.price}</p>
-                      <p className="text-2xl font-bold text-green-600">Por R$ 120</p>
-                      <p className="text-sm text-green-700 font-medium">🎉 Oferta especial!</p>
-                    </div>
-                    <div className="flex flex-col items-end space-y-2">
-                      <span className="inline-block px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full animate-pulse">
-                        -33% OFF
-                      </span>
-                      <span className="text-lg font-semibold text-red-600 bg-red-100 px-2 py-1 rounded-lg animate-pulse">
-                        Expira em {formatTime(secondsLeft)}
-                      </span>
+                {/* Promotional Price Display with Timer */}
+                <div className="mt-4 relative">
+                  {/* Timer Banner */}
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-3/4 bg-yellow-400 text-black text-center font-bold py-2 rounded-full shadow-lg animate-pulse z-10">
+                    Oferta expira em {formatTime(secondsLeft)}
+                  </div>
+                  {/* Promo Content Box */}
+                  <div className="pt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-2xl">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <p className="text-sm text-gray-500 line-through">De R$ {specialist.price}</p>
+                        <p className="text-2xl font-bold text-green-600">Por R$ 120</p>
+                        <p className="text-sm text-green-700 font-medium">🎉 Oferta especial!</p>
+                      </div>
+                      <div>
+                        <span className="inline-block px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full animate-ping">
+                          -33% OFF
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
