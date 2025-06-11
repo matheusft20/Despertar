@@ -238,9 +238,11 @@ const BookingModal: React.FC<BookingModalProps> = ({
                 {errors.appointmentType && <p className="mt-1 text-sm text-red-600">{errors.appointmentType}</p>}
               </div>
 
- // Dentro do seu return (substituindo o bloco "Date" e "Time")
-
-{/* Date */}
+              {/* Date */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Data da Consulta *
+                </label>
 <div>
   <label className="block text-sm font-medium text-gray-700 mb-2">
     Data da Consulta *
@@ -257,24 +259,32 @@ const BookingModal: React.FC<BookingModalProps> = ({
   />
   {errors.date && <p className="mt-1 text-sm text-red-600">{errors.date}</p>}
 </div>
-
-{/* Time */}
-<div>
-  <label className="block text-sm font-medium text-gray-700 mb-2">
-    Horário *
-  </label>
-  <input
-    type="time"
-    name="time"
-    value={formData.time}
-    onChange={handleInputChange}
-    className={`w-full px-3 py-2 border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 ${
-      errors.time ? 'border-red-500' : 'border-gray-300'
-    }`}
-  />
-  {errors.time && <p className="mt-1 text-sm text-red-600">{errors.time}</p>}
-</div>
-
+              {/* Time */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Horário *
+                </label>
+                <select
+                  name="time"
+                  value={formData.time}
+                  onChange={handleInputChange}
+                  className={`w-full px-3 py-2 border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 ${
+                    errors.time ? 'border-red-500' : 'border-gray-300'
+                  }`}
+                >
+                  <option value="">Selecione o horário</option>
+                  {formData.date === getTodayDate() && (
+                    <option value="agora">🚀 Agora (Atendimento Imediato)</option>
+                  )}
+                  {timeSlots.map((time) => (
+                    <option key={time} value={time}>
+                      {time}
+                    </option>
+                  ))}
+                </select>
+                {errors.time && <p className="mt-1 text-sm text-red-600">{errors.time}</p>}
+              </div>
+            </div>
 
             {/* Address Section - Only show if not online */}
             {formData.appointmentType && formData.appointmentType !== 'online' && (
